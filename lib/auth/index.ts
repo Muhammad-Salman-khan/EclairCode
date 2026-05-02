@@ -45,6 +45,6 @@ export const auth = betterAuth({
         }),
       ],
     }),
-    portal(),
+    // portal,
   ],
 });
