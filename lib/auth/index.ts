@@ -4,7 +4,9 @@ import prisma from "../prisma";
 import { polar, checkout, portal } from "@polar-sh/better-auth";
 import { Polar } from "@polar-sh/sdk";
 import polarClient from "../polar";
+import { nextCookies } from "better-auth/next-js";
 export const auth = betterAuth({
+  secret: process.env.BETTER_AUTH_SECRET,
   database: prismaAdapter(prisma, {
     provider: "postgresql",
   }),
@@ -26,25 +28,27 @@ export const auth = betterAuth({
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      prompt: "select_account",
     },
   },
   plugins: [
-    polar({
-      client: polarClient,
-      createCustomerOnSignUp: true,
-      use: [
-        checkout({
-          products: [
-            {
-              productId: "d18c9505-5f25-460d-ba48-47eaa9817e27",
-              slug: "basic-Plan", // Custom slug for easy reference in Checkout URL, e.g. /checkout/basic-Plan
-            },
-          ],
-          successUrl: process.env.POLAR_SUCCESS_URL,
-          authenticatedUsersOnly: true,
-        }),
-      ],
-    }),
+    nextCookies(),
+    // polar({
+    //   client: polarClient,
+    //   createCustomerOnSignUp: true,
+    //   use: [
+    //     checkout({
+    //       products: [
+    //         {
+    //           productId: "d18c9505-5f25-460d-ba48-47eaa9817e27",
+    //           slug: "basic-Plan", // Custom slug for easy reference in Checkout URL, e.g. /checkout/basic-Plan
+    //         },
+    //       ],
+    //       successUrl: process.env.POLAR_SUCCESS_URL,
+    //       authenticatedUsersOnly: true,
+    //     }),
+    //   ],
+    // }),
     // portal,
   ],
 });

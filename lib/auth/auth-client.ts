@@ -1,7 +1,7 @@
-import { polar } from "better-auth";
+import { polarClient } from "@polar-sh/better-auth";
 import { createAuthClient } from "better-auth/react";
 export const authClient = createAuthClient({
-  baseURL: process.env.BETTER_AUTH_URL,
+  baseURL: process.env.NEXT_PUBLIC_APP_URL,
 });
 
 export const {
@@ -11,4 +11,5 @@ export const {
   changeEmail,
   resetPassword,
   signOut,
+  revokeSessions,
 } = authClient;
