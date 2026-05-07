@@ -1,17 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-// import { MaterialSymbol } from "@/components/ui/material-symbol";
 import { useTheme } from "next-themes";
-import { Code, Moon, Settings, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import Userdropdown from "../Dropdown-user/Userdropdown";
 
 export interface NavigationProps {
@@ -85,7 +76,6 @@ export function Navigation({
           <Sun className="dark:hidden" />
           <Moon className="hidden dark:block" />
         </Button>
-        {/* Avatar Dropdown */}
         <Userdropdown />
       </div>
     </nav>
