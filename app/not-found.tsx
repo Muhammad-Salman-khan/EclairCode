@@ -5,8 +5,6 @@ import { Footer } from "@/components/footer";
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-[var(--devcode-surface)]">
-      <Navigation />
-
       <main className="flex-grow flex items-center justify-center p-8">
         <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Side: Terminal Visual */}

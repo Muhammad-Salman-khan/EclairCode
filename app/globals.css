@@ -355,6 +355,28 @@
   box-shadow: 2px 2px 0px 0px var(--devcode-shadow-color);
 }
 
+/* Thicker border for elements needing more weight */
+.neo-border-thick {
+  border: 4px solid var(--devcode-on-surface);
+}
+
+.dark .neo-border-thick {
+  border-color: var(--devcode-on-surface);
+}
+
+/* Colored shadows for emphasis */
+.neo-shadow-blue {
+  box-shadow: 4px 4px 0px 0px var(--devcode-primary);
+}
+
+.neo-shadow-yellow {
+  box-shadow: 4px 4px 0px 0px var(--devcode-secondary);
+}
+
+.neo-shadow-red {
+  box-shadow: 4px 4px 0px 0px var(--devcode-tertiary);
+}
+
  /* Font families for DevCode */
  .font-space-grotesk {
    font-family: var(--font-space-grotesk), system-ui, sans-serif;

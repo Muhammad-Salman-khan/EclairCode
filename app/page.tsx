@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/footer/footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const learningPaths = [
   {
@@ -125,9 +126,7 @@ export default function HomePage() {
                 <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
                   <div className="flex-1 space-y-6">
                     <div className="flex items-center gap-4">
-                      <span className="bg-[var(--devcode-secondary)] text-white px-3 py-1 font-space-grotesk text-xs font-bold uppercase border-2 border-[var(--devcode-on-surface)]">
-                        Medium
-                      </span>
+                      <Badge className="bg-[var(--devcode-secondary)] text-white px-3 py-1 font-space-grotesk text-xs font-bold uppercase border-2 border-[var(--devcode-on-surface)] rounded-none border-none">Medium</Badge>
                       <span className="font-space-grotesk text-xs font-bold uppercase tracking-widest text-[var(--devcode-on-surface-variant)]">
                         Problem of the Day
                       </span>
