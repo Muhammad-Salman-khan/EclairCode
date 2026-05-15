@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
@@ -9,24 +10,18 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Code2, LogOutIcon, PersonStandingIcon, Settings } from "lucide-react";
-
+import { signOut } from "@/lib/auth/auth-client";
 interface UserdropdownProps {
   user?: {
     name: string;
-    avatar?: string;
-    rank?: string;
-    points?: number;
+    image?: string;
   };
   showDropdown?: boolean;
   onLogout?: () => void;
 }
 
 const Userdropdown = ({
-  user = {
-    name: "DevCode User",
-    rank: "Pro",
-    points: 2450,
-  },
+  user,
   showDropdown = false,
   onLogout,
 }: UserdropdownProps) => {
@@ -38,8 +33,15 @@ const Userdropdown = ({
           className="h-10 w-10 p-0 rounded-full border-2 border-[#0040e0] dark:border-[#747688] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)] ring-2 ring-[#2e5bff]"
         >
           <Avatar className="h-full w-full">
-            <AvatarImage src={""} alt="vf" />
-            <AvatarFallback className="bg-[#0040e0] text-white font-bold" />
+            <AvatarImage src={user?.image} alt="vf" />
+            <AvatarFallback className="text-4xl">
+              {user?.name
+                .split(" ")
+                .map((n: string) => n[0])
+                .join("")
+                .toUpperCase()
+                .slice(0, 2)}
+            </AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
@@ -53,7 +55,10 @@ const Userdropdown = ({
             asChild
             className="flex items-center gap-3 p-3 font-bold uppercase tracking-widest text-[14px] font-space-grotesk cursor-pointer text-[#434656] dark:text-[#e5e2e1] hover:bg-[#ebe7e7] hover:translate-x-1 transition-all"
           >
-            <Link href="/profile" className="flex items-center gap-3 w-full">
+            <Link
+              href={`/dashboard/${user?.name}` || "/"}
+              className="flex items-center gap-3 w-full"
+            >
               <PersonStandingIcon />
               My Profile
             </Link>
@@ -84,7 +89,10 @@ const Userdropdown = ({
 
           <DropdownMenuSeparator className="my-2 border-t-2" />
 
-          <DropdownMenuItem className="flex items-center gap-3 p-3 font-bold uppercase tracking-widest text-[14px] font-space-grotesk cursor-pointer text-[#ae0008] hover:bg-[#ffdad6] hover:translate-x-1 transition-all">
+          <DropdownMenuItem
+            onClick={() => signOut()}
+            className="flex items-center gap-3 p-3 font-bold uppercase tracking-widest text-[14px] font-space-grotesk cursor-pointer text-[#ae0008] hover:bg-[#ffdad6] hover:translate-x-1 transition-all"
+          >
             <LogOutIcon />
             Logout
           </DropdownMenuItem>

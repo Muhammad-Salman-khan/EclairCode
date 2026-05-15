@@ -7,12 +7,11 @@ import { loginSchema } from "@/lib/Validator/Form-validators";
 import { LoginWithEmail } from "@/modules/auth/action";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { authClient, signIn, useSession } from "@/lib/auth/auth-client";
+import { signIn } from "@/lib/auth/auth-client";
 import Image from "next/image";
 
 export default function LoginForm() {
   const router = useRouter();
-  const { data } = useSession();
 
   const form = useForm({
     defaultValues: {
@@ -30,22 +29,21 @@ export default function LoginForm() {
         return;
       }
       toast.success(response.message.toString());
-
-      setTimeout(() => router.push(`/dashboard/${data?.user?.name}`), 2000);
+      setTimeout(() => router.push(`/dashboard/profile/`), 2000);
     },
   });
 
   const LoginWithGoogle = () => {
     signIn.social({
       provider: "google",
-      callbackURL: `/dashboard/${data?.user?.name}`,
+      callbackURL: `/dashboard/profile/`,
     });
   };
 
   const LoginWithGitHub = () => {
     signIn.social({
       provider: "github",
-      callbackURL: `/dashboard/${data?.user?.name}`,
+      callbackURL: `/dashboard/profile/`,
     });
   };
 

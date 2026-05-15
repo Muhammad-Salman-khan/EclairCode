@@ -12,25 +12,35 @@ interface UserData {
 
 interface ProfileHeaderProps {
   user: UserData;
+  userData: {
+    user: {
+      name: string;
+      email: string;
+      emailVerified: Boolean;
+      image: string;
+    };
+  };
 }
 
-export function ProfileHeader({ user }: ProfileHeaderProps) {
+export function ProfileHeader({ userData, user }: ProfileHeaderProps) {
+  const { name, email, emailVerified, image } = userData?.user;
   return (
     <header className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
       <div className="md:col-span-4 lg:col-span-3">
-        <div className="border-4 border-primary p-1 bg-white neo-shadow">
-          <Avatar className="w-full aspect-square">
+        <div className="p-1 bg-transparent ">
+          <Avatar className="w-full h-64 md:h-67">
             <AvatarImage
-              alt={user.name}
-              src={user.avatarUrl || "/default-avatar.png"}
+              alt={name || "Guest profile"}
+              src={image || "/default-avatar.png"}
+              className="object-fit rounded-sm"
             />
-            <AvatarFallback>
-              {user.name
+            <AvatarFallback className="text-4xl">
+              {name
                 .split(" ")
-                .map((n) => n[0])
+                .map((n: string) => n[0])
                 .join("")
                 .toUpperCase()
-                .slice(0, 2)}
+                .slice(0, 2) || "Guest profile"}
             </AvatarFallback>
           </Avatar>
         </div>
@@ -38,7 +48,7 @@ export function ProfileHeader({ user }: ProfileHeaderProps) {
       <div className="md:col-span-8 lg:col-span-9 space-y-4">
         <div className="flex flex-wrap items-baseline gap-4">
           <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase leading-none">
-            {user.name}
+            {name || "Guest profile"}
           </h1>
           <Badge className="bg-tertiary text-white px-4 py-1 text-xl font-headline font-bold border-2 border-primary neo-shadow">
             RANK #{user.rank.toLocaleString()}

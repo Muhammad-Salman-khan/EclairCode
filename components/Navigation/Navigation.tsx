@@ -35,12 +35,11 @@ export function Navigation({
   links = [
     { href: "/problems", label: "Problems" },
     { href: "/leaderboard", label: "Leaderboard" },
-    { href: "/community", label: "Community" },
   ],
   onLogout,
 }: NavigationProps) {
   const { setTheme, theme } = useTheme();
-  const isLoggedIn = false;
+  const { data: session, isPending } = authClient.useSession();
   return (
     <nav className="flex justify-between items-center h-20 px-8 w-full mx-auto border-b-2 bg-[#fcf9f8] dark:bg-[#1c1b1b] border-[#1c1b1b] dark:border-[#e5e2e1] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]">
       {/* Logo + Links */}
@@ -81,8 +80,10 @@ export function Navigation({
           <Sun className="dark:hidden" />
           <Moon className="hidden dark:block" />
         </Button>
-        {isLoggedIn ?
-          <Userdropdown />
+        {isPending ?
+          null
+        : session?.user.name ?
+          <Userdropdown user={session.user} />
         : <div className="flex gap-2">
             <Link href="/login">
               <Button variant="ghost">Login</Button>

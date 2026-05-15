@@ -5,6 +5,8 @@ import { RecentSubmissions } from "@/components//RecentSubmissions/RecentSubmiss
 import { Proficiency } from "@/components//Proficiency/Proficiency";
 import { Achievements } from "@/components//Achievements/Achievements";
 import { Footer } from "@/components/footer";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 interface UserData {
   name: string;
@@ -105,11 +107,15 @@ const userData: UserData = {
   ],
 };
 
-export default function ProfilePage() {
+export default async function ProfilePage() {
+  const data = await auth.api.getSession({
+    headers: await headers(),
+  });
+
   return (
     <div className="min-h-screen bg-background text-primary font-body antialiased">
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-12">
-        <ProfileHeader user={userData} />
+        <ProfileHeader userData={data} user={userData} />
         <StatsGrid stats={userData.stats} />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
