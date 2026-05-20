@@ -10,17 +10,22 @@ const zLink = z.object({
 // Zod schema for Navigation Props
 export const zNavigationProps = z.object({
   activePath: z.string().optional(),
-  user: z.object({
-    name: z.string(),
-    avatar: z.string().url().nullable().optional(),
-    rank: z.string().optional(),
-    points: z.number().optional(),
-    role: z.enum(["USER", "ADMIN", "GUEST"]).optional(),
-  }).optional(),
-  links: z.array(zLink).default([
-    { href: "/problems", label: "Problems" },
-    { href: "/leaderboard", label: "Leaderboard" },
-  ]),
+  user: z
+    .object({
+      name: z.string(),
+      avatar: z.string().url().nullable().optional(),
+      rank: z.string().optional(),
+      points: z.number().optional(),
+      role: z.enum(["USER", "ADMIN", "GUEST"]).optional(),
+    })
+    .optional(),
+  links: z
+    .array(zLink)
+    .default([
+      { href: "/problems", label: "Problems" },
+      { href: "/leaderboard", label: "Leaderboard" },
+    ])
+    .optional(),
   theme: z.enum(["light", "dark"]).optional(),
   onThemeToggle: z.function().optional(),
   onNotificationsClick: z.function().optional(),
