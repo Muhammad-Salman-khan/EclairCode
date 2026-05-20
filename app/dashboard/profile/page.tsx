@@ -112,10 +112,18 @@ export default async function ProfilePage() {
     headers: await headers(),
   });
 
+  if (!data?.user) {
+    return (
+      <div className="min-h-screen bg-background text-primary font-body antialiased flex items-center justify-center">
+        <p className="text-2xl">Loading or not authenticated...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-primary font-body antialiased">
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-12">
-        <ProfileHeader userData={data} user={userData} />
+        <ProfileHeader userData={data?.user} user={userData} />
         <StatsGrid stats={userData.stats} />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

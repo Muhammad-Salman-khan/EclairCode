@@ -7,7 +7,8 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { signIn, useSession } from "@/lib/auth/auth-client";
-import { Button } from "react-day-picker";
+// Using shadcn/ui Button instead (per AGENTS.md)
+import { Button } from "@/components/ui/button";
 import { Input } from "@base-ui/react";
 
 export default function SignUpForm() {

@@ -24,7 +24,7 @@ interface ProfileHeaderProps {
 }
 
 export function ProfileHeader({ userData, user }: ProfileHeaderProps) {
-  const { name, email, emailVerified, image, role } = userData?.user;
+  const { name, email, emailVerified, image, role } = userData;
 
   return (
     <header className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">

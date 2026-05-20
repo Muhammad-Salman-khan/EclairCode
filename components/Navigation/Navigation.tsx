@@ -10,10 +10,10 @@ export interface NavigationProps {
   activePath?: string;
   user?: {
     name: string;
-    avatar?: string;
+    avatar?: string | null; // Allow null
     rank?: string;
     points?: number;
-    role: string;
+    role?: string; // Make optional
   };
   links?: Array<{
     href: string;
@@ -80,16 +80,19 @@ export function Navigation({
           <Sun className="dark:hidden" />
           <Moon className="hidden dark:block" />
         </Button>
-        {session?.user?.role === "ADMIN" ?
+        {session?.user?.role === "ADMIN" && (
           <Link href="/create-problem">
             <Button variant="ghost">Create problem</Button>
           </Link>
-        : null}
-        {isPending ?
-          null
-        : session?.user.name ?
-          <Userdropdown user={session.user} />
-        : <div className="flex gap-2">
+        )}
+        {isPending ? null : session?.user?.name ? (
+          <Userdropdown user={{ 
+            name: session.user.name,
+            avatar: session.user.image ?? undefined, // Convert null to undefined
+            role: session.user.role ?? "USER", // Fallback if undefined
+          }} />
+        ) : (
+          <div className="flex gap-2">
             <Link href="/login">
               <Button variant="ghost">Login</Button>
             </Link>
@@ -97,7 +100,7 @@ export function Navigation({
               <Button variant="ghost">Sign Up</Button>
             </Link>
           </div>
-        }
+        )}
       </div>
     </nav>
   );
