@@ -114,10 +114,10 @@ Visit **[https://éclaircode.io](https://éclaircode.io)**, create your free acc
 
 ### Ready to Elevate Your Coding Game?
 
-🔗 **Live Demo:** https://let-code.vercel.app/  
-Visit **[let-code.vercel.app](https://let-code.vercel.app/)**, sign up for free, and start climbing the ranks today.
+🔗 **Live Demo:** https://eclaircode.vercel.app/  
+Visit **[eclaircode.vercel.app](https://eclaircode.vercel.app/)**, sign up for free, and start climbing the ranks today.
 
-Built by **Muhammad Salman Khan** – ✉️ alibinkhan465@gmail.com  
+Built by **Muhammad Salman Khan** – ✉️ alibinkhan465@gmail.com
 
 ---
 
