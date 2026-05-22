@@ -54,7 +54,7 @@ export default function LoginForm() {
         <div className="w-12 h-12 bg-[#0040e0] border-2 border-[#1c1b1b] flex items-center justify-center">
           <span className="material-symbols-outlined text-white">terminal</span>
         </div>
-        <Image src="/brandlogo.svg" alt="ÉclairCode" width={120} height={32} className="h-12 md:h-14 lg:h-16 w-auto"/>
+        <Image src="/brandlogo.svg" alt="ÉclairCode" width={160} height={40} className="h-14 md:h-16 lg:h-18 w-auto"/>
       </div>
 
       <div className="mb-10">
@@ -62,7 +62,7 @@ export default function LoginForm() {
           System Authentication
         </h2>
         <p className="text-[16px] text-[#434656]">
-          Enter your credentials to access the <Image src="/brandlogo.svg" alt="ÉclairCode" width={40} height={40} className="inline h-8 w-auto align-middle"/> terminal.
+          Enter your credentials to access the <Image src="/brandlogo.svg" alt="ÉclairCode" width={80} height={80} className="inline h-10 w-auto align-middle"/> terminal.
         </p>
       </div>
 
