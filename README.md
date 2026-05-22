@@ -1,114 +1,124 @@
-# Let Code
+# ![ÉclairCode Logo](public/brandlogo.svg)
 
-A professional, modern web application built with Next.js, TypeScript, and PostgreSQL. This project features a robust authentication system, an interactive dashboard, and a comprehensive UI component library.
+## 🎯 The Ultimate Playground for DSA & LeetCode Enthusiasts
 
-## 🚀 Tech Stack
-
-**Core Framework & Language**
-
-- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Runtime:** [Bun](https://bun.sh/)
-
-**Backend & Database**
-
-- **Database:** [PostgreSQL](https://www.postgresql.org/)
-- **ORM:** [Prisma](https://www.prisma.io/)
-- **Authentication:** [Better Auth](https://better-auth.com/) (integrated with Google OAuth and Polar)
-
-**Frontend & Styling**
-
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) & [Radix UI](https://www.radix-ui.com/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Data Visualization:** [Recharts](https://recharts.org/) & [TanStack Table](https://tanstack.com/table/latest)
-- **State Management & Validation:** [Zod](https://zod.dev/)
-
-## ✨ Key Features
-
-- **Advanced Authentication**: Secure user onboarding and session management using Better Auth.
-- **Interactive Dashboard**: A comprehensive admin and user dashboard featuring:
-  - Data-rich tables for resource management.
-  - Interactive analytics area charts.
-  - Responsive sidebar navigation.
-- **Role-Based Access Control (RBAC)**: Built-in support for `ADMIN` and `USER` roles.
-- **Modern UI/UX**: Fully responsive design with dark mode support, powered by Tailwind CSS 4 and a wide array of accessible components.
-- **Type-Safe Database**: End-to-end type safety from the database schema to the frontend using Prisma.
-
-## 📂 Project Structure
-
-```text
-├── app/                    # Next.js App Router
-│   ├── api/                # Backend API endpoints (Auth, etc.)
-│   ├── dashboard/          # Dashboard routes (Admin & User views)
-│   └── layout.tsx          # Root layout and global providers
-├── components/             # React Components
-│   ├── ui/                 # Base shadcn/ui components
-│   ├── providers/          # Context providers (Theme, Auth, etc.)
-│   └── [feature].tsx       # Feature-specific components (Sidebar, Charts)
-├── hooks/                  # Custom React hooks (e.g., use-mobile.ts)
-├── lib/                    # Core logic and utilities
-│   ├── action/             # Server actions for data mutations
-│   ├── auth/               # Better Auth configuration and client
-│   ├── db/                 # Database query helpers
-│   ├── prisma/             # Prisma client singleton
-│   └── services/           # Business logic layer
-├── prisma/                 # Database schema and migrations
-│   └── schema.prisma       # Database model definitions
-├── public/                 # Static assets
-└── tsconfig.json           # TypeScript configuration
-```
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- [Bun](https://bun.sh/) installed on your machine.
-- A PostgreSQL database instance.
-
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/Muhammad-Salman-khan/let-code.git
-   cd letcode-ref
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   bun install
-   ```
-
-3. **Environment Setup:**
-   Create a `.env` file in the root directory and add your database and auth credentials:
-
-   ```env
-   DATABASE_URL="postgresql://user:password@localhost:5432/letcode-ref"
-   BETTER_AUTH_SECRET="your-secret-here"
-   # Add other required environment variables for OAuth/Polar
-   ```
-
-4. **Database Migration:**
-
-   ```bash
-   bunx prisma generate
-   bunx prisma migrate dev
-   ```
-
-5. **Run the development server:**
-   ```bash
-   bun dev
-   ```
-
-## 📜 Available Scripts
-
-- `bun dev`: Starts the Next.js development server.
-- `bun build`: Generates Prisma client and builds the Next.js application for production.
-- `bun start`: Starts the production server.
-- `bun lint`: Runs ESLint to check for code quality issues.
+> **ÉclairCode** turns algorithm practice into a thrilling competition.  
+> Solve, rank, and showcase your coding chops—all in one sleek, responsive hub.
 
 ---
 
-Developed with ❤️ using Next.js and Bun.
+### 🚀 Why Engineers Choose ÉclairCode?
+
+| ✅ What You Get                       | 💡 How It Helps You                                                                  |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| **🔥 Real‑world DSA challenges**      | Sharpen the exact skills hiring managers hunt for.                                   |
+| **🏆 Live global leaderboard**        | See your rank instantly, compete with peers, and earn brag‑worthy titles.            |
+| **📊 Personal performance dashboard** | Track points, streaks, and progress over time with beautiful charts.                 |
+| **🤝 Community & mentorship**         | Join Discord/Slack channels, discuss solutions, and get feedback from industry pros. |
+| **🌗 Dark & Light modes**             | Code comfortably any time of day.                                                    |
+| **📱 Fully responsive**               | Same powerful experience on desktop, tablet, or phone.                               |
+| **💰 Free to start**                  | No hidden fees—just pure skill‑building.                                             |
+
+---
+
+### ✨ Core Features
+
+- **Dynamic Problem Library** – Thousands of curated algorithm problems, sorted by difficulty, topic, and contest style.
+- **Instant In‑Browser IDE** – Write, test, and submit code without leaving the platform.
+- **Gamified Progress** – Points, badges, weekly challenges, and leaderboard filters (global, regional, friends).
+- **Insightful Analytics** – Visualize accuracy, speed, and trend graphs on your personal dashboard.
+- **Social Proof** – Export a shareable profile badge to embed on LinkedIn, GitHub, or personal sites.
+
+---
+
+### 📋 User Journey (Get Started in < 2 minutes)
+
+1. **Sign up** – One‑click with Google or email.
+2. **Pick a challenge** – Browse by tag (`#binary-search`, `#graph‑traversal`, etc.) or join a live contest.
+3. **Code & submit** – The built‑in editor runs your solution against hidden test cases.
+4. **Earn points & rank** – Watch your score jump on the leaderboard instantly.
+5. **Track growth** – Open your dashboard to see streaks, improvement areas, and next‑level goals.
+
+---
+
+### 🌐 Join the Community
+
+- **Discord & Slack** – Real‑time chat, solution walkthroughs, and mentorship.
+- **Weekly Hackathons** – Compete for cash prizes, exclusive badges, and featured spotlights.
+- **Blog & Tutorials** – Deep‑dive articles on algorithm patterns, interview prep, and performance optimization.
+
+---
+
+### 📣 Ready to Level Up?
+
+Visit **[https://éclaircode.io](https://éclaircode.io)**, create your free account, and start climbing the ranks today!
+
+> _ÉclairCode – where precision meets performance._  ⚡️ 🏅
+
+## Code. Compete. Conquer.
+
+> **ÉclairCode** is the premier online hub for engineers and developers who want to sharpen their skills, showcase their achievements, and accelerate their career growth.
+
+---
+
+### Why Choose ÉclairCode?
+
+- **Real‑world coding challenges** – curated problems that mirror the complexities of modern software engineering.
+- **Live leaderboard** – see where you stand among a global community of top performers.
+- **Personal dashboards** – track your progress, point totals, and streaks in an intuitive, data‑rich UI.
+- **Community & mentorship** – connect with peers, get feedback, and learn from industry experts.
+- **Zero‑setup, instant access** – sign up, start solving, and watch your ranking rise.
+
+---
+
+### Core User Benefits
+
+| Benefit                  | What It Means for You                                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| **Skill Growth**         | Solve problems across a spectrum of difficulty, from beginner to expert, and receive instant feedback.         |
+| **Career Visibility**    | Highlight your rankings and completed challenges on your profile – perfect for recruiters and hiring managers. |
+| **Gamified Experience**  | Earn points, unlock badges, and compete in weekly contests for brag‑worthy recognition.                        |
+| **Insightful Analytics** | Visual dashboards let you monitor your performance trends, streaks, and areas for improvement.                 |
+| **Community Support**    | Join discussion threads, ask questions, and collaborate on solutions with like‑minded engineers.               |
+
+---
+
+### Key Features You'll Love
+
+- **Dynamic Problem Library** – thousands of curated coding challenges covering algorithms, data structures, system design, and more.
+- **Interactive Leaderboard** – filter by global, regional, or friends‑only rankings.
+- **Personalized Dashboard** – see your points, recent submissions, and streaks at a glance.
+- **Responsive Design** – seamless experience on desktop, tablet, and mobile devices.
+- **Dark & Light Modes** – choose the visual style that fits your workflow.
+- **Instant Feedback** – real‑time validation of your solutions with detailed explanations.
+
+---
+
+### Getting Started (User Journey)
+
+1. **Create an account** – sign up with email or Google in seconds.
+2. **Pick a challenge** – browse the problem library or join a themed contest.
+3. **Code in‑browser** – write, test, and submit your solution directly on the platform.
+4. **Earn points & rank** – see your score update instantly on the leaderboard.
+5. **Track progress** – use your personal dashboard to monitor growth over time.
+
+---
+
+### Join the Community
+
+- **Discord & Slack channels** for live discussion and mentorship.
+- **Weekly hackathons** with cash prizes and exclusive badges.
+- **Blog & tutorials** offering deep dives into algorithms, best practices, and interview prep.
+
+---
+
+### Ready to Elevate Your Coding Game?
+
+🔗 **Live Demo:** https://let-code.vercel.app/  
+Visit **[let-code.vercel.app](https://let-code.vercel.app/)**, sign up for free, and start climbing the ranks today.
+
+Built by **Muhammad Salman Khan** – ✉️ alibinkhan465@gmail.com  
+
+---
+
+_ÉclairCode – where precision meets performance._
