@@ -40,7 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-prisma/lib/generated/ 
 designs
 .opencode
 .vscode
