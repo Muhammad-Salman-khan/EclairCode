@@ -16,8 +16,7 @@ const userData: UserData = {
   rank: 1429,
   totalPoints: 28450,
   globalTop: 0.4,
-  avatarUrl:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDY5kMmxlmC0Kqwht55jPwdOr4m5Z5CCTBkTavzHmmW6_ae6dW9JdeM4VgLIwsae8ibWPYA2r91Rm31A4_QQHwt4F8sCFEnmLGQ-QQ2eE41A2U9au_1s1Uq69XAr-JZ314lCj3-VnlKyHXff9CCIENAGgzAUDYOAIZ31YJRBKcDL7jp7bI-KdF__ppBE8Potv0YzsXAmSiD1YuQyNijxNa2JUvV4O7Edn6lHOclLnP0OSM2TOhbQgTXecfenP5eq7pz0tXnkDiMxA",
+  avatarUrl: "/brandlogo.svg",
   stats: [
     {
       icon: "terminal",

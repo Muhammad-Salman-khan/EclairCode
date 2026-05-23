@@ -102,7 +102,7 @@ export function SettingsClient() {
                   <div className="relative group" data-depth="3">
                     <Avatar className="w-32 h-32 border-4 border-on-surface neo-shadow-secondary">
                       <AvatarImage
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdnmYiIPo06RKdkqT5E-TMeUco975QRb8tTVYjIZSPVAB7N7h4e2NzbEWB_xCAT3VgK73_yVhrqOvqqo6PBm6f4XjwEhP9D4EkLyzwMv-nlrIG3NdOWib-3RNm_H0T4Hjg23Uk_meYQFZ7UxYHMXF0NnGO-qAYlLg_XQWnZHB6cYsDnRy8__8UO-N2bXfi0CHoXmmy4HvirgmT5aAqs9GrXzmlHXn_oLBDesD57gRBngVd_48uzUaxHBSypH8oi4AkTUjqg52dZw"
+                        src="/brandlogo.svg"
                         alt="User Profile"
                       />
                       <AvatarFallback>DN</AvatarFallback>

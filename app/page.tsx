@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer/footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 const learningPaths = [
   {
@@ -47,7 +48,7 @@ const leaderboardUsers = [
     points: 2450,
     color: "var(--devcode-tertiary)",
     avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGKLK3nNRQZjQRIMw4WYFVFBW6DKscxhkRfbQEsGaVX5uUDGYcaKmj-0drXy_aNmkCeMscOz_08rC3sP8P11Mi-LaOsjlQxQDWvTNuXTSV56qJfmTjrSK0rGFoKKrvqWLOxu1mz1202a2QEP1TLqnuhM6ono2YSRTgznXHqt_2vqtcd6nh0WgNL1dJ_q5StJyQk9jbS-COIsZBUSlyusWkxlWLu45eutZ7CY3s-2Nr-09dXPoAjpY2Und5PorBg4mSK4Pp4O5Fmw",
+      "/brandlogo.svg",
   },
   {
     rank: 2,
@@ -55,7 +56,7 @@ const leaderboardUsers = [
     points: 2120,
     color: "var(--devcode-secondary)",
     avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBxf6n6QDLPbb98tREltgZCLq8g-9mdQWhByIDGnBxkcdXwJiifPFYD12mLKDAIZ5LNFMLtTNx0jcXGQLtOrOXz_0brSQnRwg1IKTOqoA2NJMaMOOfK8EKmSAtXBWnKNVb0Xyob145efq1rpIZM1610a8-zGcAz2Ih9-wh8vV7Q2Vi8yuN8QvQcn_x_eHiA-6xkSnqF7djlDA2XH0gQgHjTz2WXRxEYggb6x3OFnEbnprhA9hVzihifWz8ICW6K1GY2ot1ws6GYpw",
+      "/brandlogo.svg",
   },
   {
     rank: 3,
@@ -63,7 +64,7 @@ const leaderboardUsers = [
     points: 1980,
     color: "var(--devcode-on-surface)",
     avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDjZW3udWeoBdmgZ1kLWMaEyPHyW3O_nueXUuioExZQ4eFNQTaLwiVFVwIST5FwmF1gPacUJ0s4jsRVjMBtT7HqBCTaXIcNIx0o6NfBy-GCiwNt7T5J5E5VDrJzBco2Xv7QECiUQvxBm-DWE0wCkgEwPTH451HrWzvvzZpfH9_cQ-qHwa4U8ljR_zTk8xVPmE_A_v_RRFqznevBMFFSeXdFcAG6Krg5WGZTf6inmsABakLvuaudZii2ojzxrzyk3rCiBeTv6eNaMA",
+      "/brandlogo.svg",
   },
 ];
 
@@ -223,10 +224,12 @@ export default function HomePage() {
                         >
                           {String(user.rank).padStart(2, "0")}
                         </span>
-                        <img
+                        <Image
                           alt={user.name}
-                          className="w-12 h-12 border-2 border-[var(--devcode-on-surface)] grayscale"
                           src={user.avatar}
+                          width={48}
+                          height={48}
+                          className="border-2 border-[var(--devcode-on-surface)] grayscale"
                         />
                         <span className="font-space-grotesk font-bold text-sm uppercase">
                           {user.name}

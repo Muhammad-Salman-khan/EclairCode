@@ -1,4 +1,5 @@
 import LoginForm from "./_LoginForm/Login-form";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -19,16 +20,20 @@ const page = () => {
         </div>
         <div className="relative z-10 w-full max-w-lg">
           <div className="bg-white p-8 border-2 border-[#1c1b1b] shadow-[4px_4px_0px_0px_#1c1b1b]">
-            <img
-              alt="Developer Coding Environment"
-              className="w-full aspect-square object-cover border-2 border-[#1c1b1b] mb-8"
-              src="https://lh3.googleusercontent.com/aida/ADBb0ujFZdftX-X0fqlSfCvYqFH3cFICSZD6eb9pawP_abC9IBtujWMOp-eUnCxVJR_sD5iM2R-BY4ZVtCEdPIG1nfB2lfagWIXuDJuvwmU_t_McF2CE_6lIhTCmWYM_qUd1pa9yPG6Shzyv7RDFszmqC7G61IDPK2jVhRaPZz9KuLt0omZgIcOPOht71-n0lwN5SykrhRazUKmGUjbYmRybXrYNUYdyNE0Q7TOLcJP47PAlwKY1fSitbUVAOw"
-            />
+            <div className="relative w-full aspect-square mb-8">
+              <Image
+                alt="Developer Coding Environment"
+                src="/brandlogo.svg"
+                fill
+                className="object-cover border-2 border-[#1c1b1b]"
+              />
+            </div>
             <h1 className="text-[32px] font-bold leading-none mb-4 text-[#1c1b1b]">
               ENGINEER THE FUTURE.
             </h1>
             <p className="text-[18px] text-[#434656]">
-              Join the elite community of developers solving the world&apos;s most complex algorithmic challenges.
+              Join the elite community of developers solving the world&apos;s
+              most complex algorithmic challenges.
             </p>
           </div>
           <div className="absolute -bottom-6 -right-6 bg-[#dfed00] text-[#1b1d00] px-6 py-3 border-2 border-[#1c1b1b] font-bold uppercase tracking-widest shadow-[4px_4px_0px_0px_#1c1b1b]">

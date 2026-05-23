@@ -10,10 +10,9 @@ const page = () => {
         <div className="absolute inset-0 opacity-50 mix-blend-overlay">
           <Image
             alt="Background illustration of high-performance coding environment"
-            height={400}
-            width={200}
-            className="w-full h-full object-cover"
-            src={"/brandlogo.svg"}
+            src="/brandlogo.svg"
+            fill
+            className="object-cover"
           />
         </div>
         <div className="relative z-10 max-w-xl text-center md:text-left space-y-6">
