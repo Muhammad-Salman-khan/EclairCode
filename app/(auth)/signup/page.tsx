@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SignUpForm from "./_SignUpForm/SignUpForm";
 
 const page = () => {
@@ -7,10 +8,12 @@ const page = () => {
       <section className="relative w-full md:w-1/2 min-h-[40vh] md:min-h-screen bg-[#1c1b1b] flex flex-col items-center justify-center p-8 overflow-hidden border-b-4 md:border-b-0 md:border-r-4 border-[#1c1b1b]">
         {/* Background Image Reference */}
         <div className="absolute inset-0 opacity-50 mix-blend-overlay">
-          <img
-            alt=""
+          <Image
+            alt="Background illustration of high-performance coding environment"
+            height={400}
+            width={200}
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida/ADBb0ujFZdftX-X0fqlSfCvYqFH3cFICSZD6eb9pawP_abC9IBtujWMOp-eUnCxVJR_sD5iM2R-BY4ZVtCEdPIG1nfB2lfagWIXuDJuvwmU_t_McF2CE_6lIhTCmWYM_qUd1pa9yPG6Shzyv7RDFszmqC7G61IDPK2jVhRaPZz9KuLt0omZgIcOPOht71-n0lwN5SykrhRazUKmGUjbYmRybXrYNUYdyNE0Q7TOLcJP47PAlwKY1fSitbUVAOw"
+            src={"/brandlogo.svg"}
           />
         </div>
         <div className="relative z-10 max-w-xl text-center md:text-left space-y-6">
@@ -22,7 +25,8 @@ const page = () => {
             <span className="text-[#dfed00]">ENGINEER THE FUTURE.</span>
           </h1>
           <p className="text-[18px] text-[#c4c5d9] max-w-md font-medium leading-tight">
-            Enter the high-performance ecosystem designed for precision engineering and structural code mastery.
+            Enter the high-performance ecosystem designed for precision
+            engineering and structural code mastery.
           </p>
           <div className="flex gap-4 pt-8">
             <div className="w-12 h-1 bg-[#0040e0]"></div>

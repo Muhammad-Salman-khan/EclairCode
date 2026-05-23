@@ -37,7 +37,7 @@ export default function LeaderboardPage() {
             <div className="order-2 md:order-1 bg-surface-container-high neo-border-thick neo-shadow p-8 flex flex-col items-center text-center">
               <div className="relative mb-6">
                 <img
-                  alt="Code_Wizard"
+                  alt="Profile picture of Code Wizard – top React contributor"
                   className="w-32 h-32 neo-border-thick bg-white"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDd5Ge4bBigdkRnx7PFME8qh9601GSGK47gCDkoQL9s_lOKsFPd23_MxxiaRsJP_I7Wg3qXnaa_RDdJKd-j2sG8Y0i31NK0b5t87qh953LzMOfaHlUkXePeFdk_e_Ed8C-cd-gOonHRDLsy4m2QOXcUnpWTL_hpVWathfVnx5XMY3Jy6fHHHKhfIu72AyZVgAGCyXfi1Dh5jWD0ruU75Mu7oOFpJUerMvM040jAqG7zDXkmA6sEytGTyC5abrF__2rJ4uIyWKYfw"
                 />
@@ -64,7 +64,7 @@ export default function LeaderboardPage() {
             <div className="order-1 md:order-2 bg-primary-container neo-border-thick neo-shadow-lg p-10 flex flex-col items-center text-center md:-translate-y-8">
               <div className="relative mb-6">
                 <img
-                  alt="Alex_Nodes"
+                  alt="Profile picture of Alex Nodes – #1 React master"
                   className="w-48 h-48 neo-border-thick bg-white"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Nv18nrvF8wxcMsX4_y6r_WFNlMywzI7kDynbnkSIgrQXt9Cui84T_Cn4RLXbpNrjefP3MKmxsoRiyN-fnq962C3H4lzp2oX4yAIzLAg8IkIFHnoC2smi6R0yXR0l9PuNd9IuE-IhG_pyvbSBsw_M9-mLWLQ6750L9Ii7Vncsmr9pZEoAvCN0xJDSzH3Av3KNcRONPL7WEBhYYVeAHHywoLlOOmdIu3vlgEskI4Wm8W1CPXb_X8OC7ta652QFv1s1cF56cJLeIQ"
                 />
@@ -91,7 +91,7 @@ export default function LeaderboardPage() {
             <div className="order-3 bg-surface-container-high neo-border-thick neo-shadow p-8 flex flex-col items-center text-center">
               <div className="relative mb-6">
                 <img
-                  alt="Algo_Queen"
+                  alt="Profile picture of Algo Queen – algorithm specialist"
                   className="w-32 h-32 neo-border-thick bg-white"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0GDpJbZgq3fYlpDhqsjcnv6eafp7keG7Pk1OsTHsq9OGqzTFdONPqEE2XfCgC0oqBT7TUoC_AiqajtGp_14LO9OQJpOEsMwLAmpEZMjosTUOkfxG2wQwQGL8zxbqFPb_hKWt2pql6RPjgcWh3TR-kMr9W17RrRPvwsrmLPNGPDuxr8LoDhZ31ckHG_8sCdhaPhIFSCVV2Ft5ko06zzBGnnVysaFkxwM8OMggvGShpSmuV-wlootRCiLr5KNAXELhpMFLb0kXHQ"
                 />

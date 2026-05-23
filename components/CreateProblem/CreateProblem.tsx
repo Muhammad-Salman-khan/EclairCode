@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Input } from "@/components/ui/input";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -21,9 +21,11 @@ import {
 } from "@/components/ui/combobox";
 
 export function CreateProblem() {
+  const idCounter = useRef(0);
+  const generateId = () => ++idCounter.current;
   const [testCases, setTestCases] = useState<
     { id: number; input: string; output: string }[]
-  >([{ id: Date.now(), input: "", output: "" }]);
+  >([{ id: generateId(), input: "", output: "" }]);
   const [tags, setTags] = useState<string[]>([]);
   const tagsAnchor = useComboboxAnchor();
   const [difficulty, setDifficulty] = useState<string>('');
@@ -32,7 +34,7 @@ export function CreateProblem() {
   const languageAnchor = useComboboxAnchor();
 
   const addCase = () => {
-    setTestCases([...testCases, { id: Date.now(), input: "", output: "" }]);
+    setTestCases([...testCases, { id: generateId(), input: "", output: "" }]);
   };
 
   const removeCase = (id: number) => {

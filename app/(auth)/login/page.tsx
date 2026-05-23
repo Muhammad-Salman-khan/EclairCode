@@ -28,7 +28,7 @@ const page = () => {
               ENGINEER THE FUTURE.
             </h1>
             <p className="text-[18px] text-[#434656]">
-              Join the elite community of developers solving the world's most complex algorithmic challenges.
+              Join the elite community of developers solving the world&apos;s most complex algorithmic challenges.
             </p>
           </div>
           <div className="absolute -bottom-6 -right-6 bg-[#dfed00] text-[#1b1d00] px-6 py-3 border-2 border-[#1c1b1b] font-bold uppercase tracking-widest shadow-[4px_4px_0px_0px_#1c1b1b]">

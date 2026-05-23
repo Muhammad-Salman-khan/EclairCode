@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Navigation } from "@/components/Navigation";
+import Seo from "@/components/Seo/Seo";
 import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
@@ -47,7 +48,8 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
-          <Navigation />
+          <Seo />
+            <Navigation />
           <TooltipProvider>
             <Toaster position="top-center" theme="light" richColors />
             {children}
