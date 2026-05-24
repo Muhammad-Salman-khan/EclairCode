@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/footer/footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import CreateProblem from "@/action/create-problem";
 
 const learningPaths = [
   {
@@ -66,6 +64,9 @@ const leaderboardUsers = [
 ];
 
 export default async function HomePage() {
+  const res = await CreateProblem();
+  console.log(res);
+
   return (
     <>
       <main className="min-h-screen bg-[var(--devcode-surface)] text-[var(--devcode-on-surface)]">

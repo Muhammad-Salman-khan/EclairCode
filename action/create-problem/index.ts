@@ -1,10 +1,11 @@
 "use server";
 
+import { returnResponse } from "@/lib/helperFunctions";
 import getCurrentUserRole from "../User-related-query";
 
 const CreateProblem = async () => {
-  const res = await getCurrentUserRole();
-  console.log(res);
+  const { status, success, data, message, error } = await getCurrentUserRole();
+  if (!success) return returnResponse(status, success, message, error, null);
   // accepting data
   // validating data
   // running loop foreach language

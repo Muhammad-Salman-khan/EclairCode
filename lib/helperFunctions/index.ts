@@ -20,11 +20,11 @@ export const checkUserForData = async (email: string) => {
 };
 
 export const returnResponse = (
-  status: Number,
-  success: Boolean,
-  message: String | null,
-  error?: String | null,
-  data?: Object | null,
+  status: number,
+  success: boolean,
+  message: string | null,
+  error?: string | null,
+  data?: object | null,
 ) => {
   return {
     status,
